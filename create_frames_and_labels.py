@@ -17,7 +17,7 @@ def extract_random_frames(input_folder, output_folder, model_path):
     with open(classes_file, "w") as f:
         f.write("pedestrians\nbikes\nbicyclists\ne-scooters\ne-scooterists\n")
     
-    model = YOLO(model_path,imgsz=1280)  # Chargement du modèle YOLO
+    model = YOLO(model_path)  # Chargement du modèle YOLO
     video_files = [f for f in os.listdir(input_folder) if f.endswith(".mp4")]
     frame_count = 1
     
